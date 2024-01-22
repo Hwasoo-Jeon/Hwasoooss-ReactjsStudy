@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>rascr dsuddmtd</h1>
+        <button id="btn1">버튼1</button>
+        <div id="here">여기</div>
+        <div id="here1">여기1</div>
+        <hr />
+        <div id="here2">여기2</div>
+        <button id="btnIncrease">증가</button>
+        <button id="btnDecrease">감소</button>
+    </body>
+    <script>
+        var here = document.getElementById('here2');
+        var su = here.innerHTML;
+        var su = here.innerText;
+        if (typeof su != 'number') su = 0;
+        document.getElementById('btnIncrease').onclick = () => {
+            su = parseInt(su) + 1;
+            here.innerText = su;
+        };
+        document.getElementById('btnDecrease').onclick = () => {
+            su = parseInt(su) - 1;
+            here.innerText = su;
+        };
+    </script>
+    <!--
+    <script type="module" src="./go2.js"></script>
+    <script type="module" src="./go.js"></script>
+    
+    <script type="text/javascript">
+        document.querySelector('#here1').innerHTML += 'ggggggggwwwwwwwwwwwwgggggggggggggg';
+    </script>
+    <script type="module">
+        document.querySelector('#here1').innerHTML += 'g11111111111ggggggggggggggggggggg';
+    </script>
+    
+    <script>
+        const numbersOne = [1, 2, 3];
+        const numbersTwo = [4, 5, 6];
+        const numbersCombined = [...numbersOne, ...numbersTwo];
+        const numbersCombined1 = [numbersOne, numbersTwo];
+        console.log(numbersCombined);
+        console.log(numbersCombined1);
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const [one, tttt, two, three, ...civivi] = numbers;
+        console.log(one, two, civivi);
+
+        const v1 = { brand: 'Ford', model: 'Mustang', color: 'red' };
+        const v2 = { type: 'car', year: 2021, color: 'yellow' };
+        const myUpdatedCars = { ...v1, ...v2 };
+        console.log(v1);
+        console.log(v2);
+        console.log(myUpdatedCars);
+    </script>
+    
+    <script>
+        const myArray = ['apple', 'banana', 'orange'];
+        const myList = myArray.map((item) => '<p>' + item + '</p>');
+        console.log(myList);
+        // document.getElementById('here').innerHTML = myList.join();
+        document.getElementById('here').innerHTML = myList.join().replaceAll(',', '');
+    </script>
+    <script>
+        class Header {
+            constructor() {
+                this.color = 'Red';
+            }
+            changeColor = function (e) {
+                const hereObj = document.getElementById('here');
+                if (this == window) hereObj.style.backgroundColor = 'orange';
+                else if (this.nodeName == 'BUTTON') hereObj.style.backgroundColor = 'lightgreen';
+                else if (this.nodeName == 'DIV') hereObj.style.backgroundColor = 'blue';
+                hereObj.innerHTML += this;
+                console.dir(this);
+                e.stopPropagation();
+            };
+        }
+        const myheader = new Header();
+        window.addEventListener('click', myheader.changeColor);
+        document.getElementById('btn1').addEventListener('click', myheader.changeColor);
+        document.getElementById('here').addEventListener('click', myheader.changeColor);
+    </script>
+    <script>
+        (function () {
+            console.log('익명함수 실행');
+        })();
+
+        const f4 = function () {
+            console.log('익명함수 변수에 할당합니다.(리터럴함수)');
+        };
+
+        const f5 = (aa) => {
+            console.log(aa + '화살표함수로 변경합니다.');
+            return aa + '';
+        };
+        const f6 = (val) => val + '화살표함수 파라메터와 리턴';
+
+        f4();
+        f5();
+        var result = f5('f22222');
+        console.log('console1111' + result);
+        result = f6(100);
+        console.log(result);
+    </script>
+    <script>
+        class Shape {
+            //자바스크립트의 생성자 이름은 constructor(); 이다
+            constructor(name) {
+                this.model = name; //생성시마다 메서드 추가
+                this.draw = function () {
+                    console.log(this.model + '~~그리다.... ');
+                };
+            }
+            // 프로토타입 메서드
+            display() {
+                return this.model + '클래스 내부';
+            }
+        }
+        const myshape = new Shape('도형');
+        console.log(myshape);
+        myshape.draw();
+        console.log(myshape.display());
+
+        class Rectangle extends Shape {
+            constructor(name, width, height) {
+                super(name);
+                this.width = width;
+                this.height = height;
+            }
+            show() {
+                return display() + ' ,width= ' + this.width + ' ,height=' + this.height;
+            }
+        }
+        function display() {
+            return '클래스 외부에' + this.model;
+        }
+        const myshape2 = new Rectangle('사각형', 10, 20);
+        console.log(myshape2.show());
+    </script>
+    <script>
+        console.log(a); //undefined
+        var a = 10;
+        f1();
+        {
+            let b = 20; //block 내에서 유효
+            console.log(b);
+        }
+
+        const c = 30;
+
+        function f1() {
+            a++;
+            console.log(a);
+        }
+
+        function f2() {
+            {
+                let c = 'cva';
+                console.log(c);
+            }
+            {
+            }
+        }
+        f2();
+    </script>
+    -->
+</html>
