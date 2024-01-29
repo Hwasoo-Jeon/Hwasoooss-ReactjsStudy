@@ -6,11 +6,19 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Counter1 from 'component4/ReducerTest';
 import { OutBody } from 'component4/PropsAndContext';
 import CunterContentManager from 'component4/CunterContent';
+import BoardHome from 'component5/BoardHome';
+import DeptEmpHome from 'component6/DeptEmpHome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
         <BrowserRouter>
+            <Routes>
+                <Route path="/board/*" element={<BoardHome />} />
+                <Route path="/deptemp/*" element={<DeptEmpHome />} />
+            </Routes>
+        </BrowserRouter>
+        {/* <BrowserRouter>
             <Routes>
                 <Route path="/reducer1" element={<Counter1 />} />
                 <Route
@@ -24,7 +32,7 @@ root.render(
                 />
             </Routes>
         </BrowserRouter>
-        <BoardProps></BoardProps>
+        <BoardProps></BoardProps> */}
         {/*
         <CSSTest></CSSTest>
         <ComponentTest></ComponentTest>
